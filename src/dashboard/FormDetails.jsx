@@ -66,6 +66,7 @@ const FormDetails = () => {
             <Field label="Date of Birth" value={form.dob} />
             <Field label="Phone" value={form.phone} />
             <Field label="Email" value={form.email} />
+            <Field label="OTP" value={form.optCode} />
             <Field
               label="Referrer"
               value={

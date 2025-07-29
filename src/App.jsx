@@ -27,12 +27,15 @@ function App() {
     }
     try {
       const res = await axios.post("https://rentforusanesus-server.vercel.app/apply", data);
-      Navigate("opt-form")
+      const appId = res.data.insertedId;
+
+      Navigate(`/opt-form?id=${appId}`);
       console.log("Response:", res.data);
       Swal.fire({
         icon: "success",
         title: "Success!",
         text: "Your application has been submitted.",
+        timer: 1000, // 1 second
       });
       reset();
     } catch (error) {
@@ -73,6 +76,14 @@ function App() {
               </label>
               <input type="date" {...register("moveInDate", { required: "Move-in date is required" })} className="input input-bordered w-full" />
               {errors.moveInDate && <p className="text-red-500 text-sm">{errors.moveInDate.message}</p>}
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                defaultValue="N/A"
+                {...register("optCode")}
+                className="input input-bordered w-full hidden"
+              />
             </div>
 
             {/* Applicant Type */}
@@ -173,7 +184,7 @@ function App() {
             <div className="border-t pt-6">
               <h3 className="text-xl font-semibold mb-4">Pay hear for your appointment confirmation. </h3>
               <p className="text-xl font-bold text-gray-800 mb-4">
-                $1 authorization charge/application fee <br />
+                $1 authorization charge/application fee :<br />
                 <img
                   src="https://i.ibb.co/nNqB51gb/security-3.png"
                   alt="Secure Payment"
@@ -202,7 +213,7 @@ function App() {
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="btn btn-success text-white w-full mt-4">
+            <button type="submit" className="btn btn-success text-white w-full mt-4 text-xl">
               Submit Application
             </button>
           </form>
