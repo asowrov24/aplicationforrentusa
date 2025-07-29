@@ -91,7 +91,7 @@ const OtpForm = () => {
         </form>
 
         {/* Add your text here */}
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm font-bold text-gray-500">
           Enter the appointment confirmation code here which will be sent to your email or&nbsp;number&nbsp;shortly.
         </p>
       </div>

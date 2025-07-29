@@ -74,7 +74,7 @@ function App() {
               <label className="label">
                 <span className="label-text font-normal text-black">Desired Move-in Date</span>
               </label>
-              <input type="date" {...register("moveInDate", { required: "Move-in date is required" })} className="input input-bordered w-full" />
+              <input type="date" {...register("moveInDate")} className="input input-bordered w-full" />
               {errors.moveInDate && <p className="text-red-500 text-sm">{errors.moveInDate.message}</p>}
             </div>
             <div className="form-control">
