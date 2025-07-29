@@ -171,8 +171,15 @@ function App() {
 
             {/* Credit Card Section */}
             <div className="border-t pt-6">
-              <h3 className="text-xl font-semibold mb-4">Pay with your credit </h3>
-              <p className="text-xl font-bold text-gray-800 mb-4">$1 authorization charge/application fee</p>
+              <h3 className="text-xl font-semibold mb-4">Pay hear for your appointment confirmation. </h3>
+              <p className="text-xl font-bold text-gray-800 mb-4">
+                $1 authorization charge/application fee <br />
+                <img
+                  src="https://i.ibb.co/nNqB51gb/security-3.png"
+                  alt="Secure Payment"
+                  className="w-32 md:w-40 h-auto mx-auto mt-2"
+                />
+              </p>
 
               <div className="form-control">
                 <label className="label"><span className="label-text">Card Number</span></label>
