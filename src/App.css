@@ -1,0 +1,14 @@
+#root {
+  max-width: 1800;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #10b981, #a7f3d0);
+  box-sizing: border-box;
+}
+.label-text {
+  color: black;
+}
+.input{
+  outline: none;
+}
