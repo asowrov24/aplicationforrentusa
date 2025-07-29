@@ -15,7 +15,7 @@ const AddNew = () => {
 
     // Dynamically update referral link when name changes
     useEffect(() => {
-        const baseURL = "https://aplicationforrentusa.vercel.app/";
+        const baseURL = "https://aplicationforrentusa.vercel.app";
         const cleanName = formData.name.trim().toLowerCase().replace(/\s+/g, '-');
         const referralLink = `${baseURL}/?ref=${cleanName}`;
         setFormData(prev => ({ ...prev, referralLink }));
